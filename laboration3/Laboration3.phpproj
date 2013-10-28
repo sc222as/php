@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>Laboration3</Name>
+    <ProjectGuid>{9a3b711f-d136-4fcf-a8cd-c9e2c1257bab}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Laboration3</RootNamespace>
+    <!-- important to be opened by PHP Tools, when also Phalanger Tools are installed -->
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <AssemblyName>Laboration3</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="controller\run.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="index.php" />
+    <Compile Include="model\cookie.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="model\date.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="model\loginvalidator.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="model\logout.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="view\HTMLPage.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="view\loginsuccess.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="view\mainview.php">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="model" />
+    <Folder Include="controller" />
+    <Folder Include="view" />
+  </ItemGroup>
+</Project>

@@ -19,16 +19,16 @@ class run
     }
     public function display() {  
 
-    $foo = new \view\mainview();    
-    return $foo->frontpage();    
+    $mainview = new \view\mainview();    
+    return $mainview->frontpage();    
 
     }
 
     public function login($username, $password, $rememberme) {
 
-    $foo = new \model\loginvalidator();
-    $foo2 = $foo->validator($username, $password, $rememberme);  
-    if ($foo2 == true) {
+    $loginvalidator = new \model\loginvalidator();
+    $loginvalidation = $loginvalidator->validator($username, $password, $rememberme);  
+    if ($loginvalidation == true) {
            session_start();
            
            $_SESSION["username"]=$username;           
